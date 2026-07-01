@@ -38,6 +38,7 @@ data/uploads/
 # Generated reports and local working files
 output/
 tmp/
+docs/
 
 # Test artifacts
 backend/tests/test.db

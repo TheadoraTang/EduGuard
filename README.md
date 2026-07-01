@@ -173,20 +173,3 @@ Frontend production build:
 Set-Location frontend
 pnpm build
 ```
-
-## Data Notes
-
-Raw StudyChat and MathDial files should stay outside Git under `data/raw/`. Generated intermediate data belongs under `data/processed/` or `output/`, both ignored by Git. Only sanitized demo samples under `data/demo/` are intended to be versioned.
-
-StudyChat is CC BY 4.0. When using it in reports or papers, cite the StudyChat dataset and paper by McNichols, Ikram, and Lan. Do not treat original StudyChat labels as direct evidence of real student risk without review.
-
-## Coursework Materials
-
-Course-specific materials have been moved out of the repository root:
-
-- `docs/coursework/assignment/`: final assignment requirements.
-- `docs/coursework/proposal/`: original project-direction notes.
-- `docs/coursework/paper/`: paper drafts and Word templates.
-- `docs/coursework/reports/`: experiment narratives, dataset reports, and evaluation summaries.
-
-These files document the academic process behind the project. The runnable system is centered on `backend/`, `frontend/`, `database/`, `data/demo/`, `prompts/`, and `scripts/`.

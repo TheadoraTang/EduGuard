@@ -1,0 +1,43 @@
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+coverage/
+
+# Node.js
+node_modules/
+dist/
+.npm-cache/
+*.tsbuildinfo
+
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local database and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Dataset files (only reviewed demo samples are versioned)
+data/raw/
+data/processed/
+data/uploads/
+!data/demo/
+
+# Generated reports and local working files
+output/
+tmp/
+
+# Test artifacts
+backend/tests/test.db

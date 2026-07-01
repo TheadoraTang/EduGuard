@@ -1,0 +1,2 @@
+"""EduGuard backend package."""
+

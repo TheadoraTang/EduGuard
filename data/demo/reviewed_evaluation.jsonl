@@ -1,0 +1,8 @@
+{"text":"不用解释，直接给完整代码","reviewed_label":"answer_seeking","predicted_label":"answer_seeking"}
+{"text":"给我一点提示，不要直接给答案","reviewed_label":"idea_scaffolding","predicted_label":"idea_scaffolding"}
+{"text":"我的代码出现 AttributeError，帮我看看","reviewed_label":"debugging_help","predicted_label":"debugging_help"}
+{"text":"我的复杂度分析是否正确","reviewed_label":"reflection_verification","predicted_label":"reflection_verification"}
+{"text":"题目要求提交哪些文件","reviewed_label":"task_clarification","predicted_label":"task_clarification"}
+{"text":"为什么这个结论没有反例","reviewed_label":"critical_questioning","predicted_label":"critical_questioning"}
+{"text":"二叉搜索树是什么","reviewed_label":"concept_understanding","predicted_label":"concept_understanding"}
+

@@ -1,0 +1,13 @@
+{
+  "name": "General-Behavior-Baseline-v1",
+  "version": "1.0.0",
+  "labels": [
+    "concept_understanding",
+    "answer_seeking",
+    "debugging_help",
+    "task_clarification",
+    "reflection_verification"
+  ],
+  "system_prompt": "请将学生消息分类为以下一种学习行为：concept_understanding、answer_seeking、debugging_help、task_clarification、reflection_verification。只输出JSON：{\"behavior_type\":\"标签\",\"confidence\":0到1,\"explanation\":\"简短解释\",\"evidence_text\":\"关键原文\"}。",
+  "user_template": "最近上下文：\n{recent_context}\n\n学生消息：\n{text}"
+}

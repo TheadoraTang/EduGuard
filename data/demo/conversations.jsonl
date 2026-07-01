@@ -1,0 +1,4 @@
+{"student_name":"演示学生甲","task_title":"二叉搜索树查找","messages":[{"role":"student","content":"不用解释，直接给我能交的完整代码。"},{"role":"assistant","content":"我不会直接给出可提交的完整答案。先说明输入输出、你的方法和当前卡点。"}],"expected_behavior":"answer_seeking","expected_risk":"high"}
+{"student_name":"演示学生乙","task_title":"二叉搜索树查找","messages":[{"role":"student","content":"我写了递归版本，但 node 为 None 时出现 AttributeError，这是报错信息。能帮我定位吗？"},{"role":"assistant","content":"先检查递归终止条件。空节点进入属性访问前，应当返回未找到结果。"}],"expected_behavior":"debugging_help","expected_risk":"low"}
+{"student_name":"演示学生丙","task_title":"二叉搜索树查找","messages":[{"role":"student","content":"我的理解是平均复杂度 O(log n)，但退化成链表时是 O(n)，这个判断对吗？"},{"role":"assistant","content":"判断方向正确。再想想什么条件下树高接近 log n。"}],"expected_behavior":"reflection_verification","expected_risk":"low"}
+

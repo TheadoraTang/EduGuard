@@ -1,0 +1,59 @@
+{
+  "design": {
+    "annotators": 1,
+    "delayed_retest_samples": 60,
+    "formal_unique_samples": 550,
+    "minimum_delay_days": 7,
+    "paper_term": "single-annotator reference set",
+    "prohibited_claim": "inter-annotator agreement",
+    "retest_blinding": "Retest rows use alias IDs and a new order; the mapping is private"
+  },
+  "generated_at_utc": "2026-09-08T02:38:03.384011+00:00",
+  "inputs": {
+    "formal": {
+      "path": "data/bench2026/human_eval/annotator_a_formal_550.jsonl",
+      "sha256": "27bae92e748624cc4cd476542b1a2f04c046a53425cce9096e1d03c4f7a91870"
+    },
+    "private_key": {
+      "path": "data/bench2026/human_eval/gold_annotation_private_key.jsonl",
+      "sha256": "14135e7f2725173d84662bc0714acbe2bf4de6303e04ca40bf5241499ecad92e",
+      "tracked_in_git": false
+    }
+  },
+  "integrity": {
+    "formal_visible_ids_unique": true,
+    "retest_maps_to_formal": true,
+    "retest_visible_ids_unique": true,
+    "visible_id_overlap": 0
+  },
+  "outputs": {
+    "formal": {
+      "path": "data/bench2026/human_eval/single_annotator_formal_550.jsonl",
+      "rows": 550,
+      "sha256": "d9af4964f8ea29748549202603d4f74b1a9b9637163efd351b3d1f30655567ea"
+    },
+    "retest": {
+      "path": "data/bench2026/human_eval/single_annotator_retest_60.jsonl",
+      "rows": 60,
+      "sha256": "1062cc7104c82fb4d701da0b4b56e9d8bcac2589dda6c0f6b03fea73a0cc6c61"
+    },
+    "retest_private_mapping": {
+      "path": "data/bench2026/human_eval/single_annotator_retest_private_key.jsonl",
+      "rows": 60,
+      "sha256": "201da596d734fa3a9529be38b5b3b30bd16e98f963eb60673904c45748349cb1",
+      "tracked_in_git": false
+    }
+  },
+  "randomization": {
+    "retest_per_silver_stratum": 12,
+    "seed": 20260909
+  },
+  "retest_silver_strata": {
+    "answer_seeking": 12,
+    "concept_understanding": 12,
+    "debugging_help": 12,
+    "reflection_verification": 12,
+    "task_clarification": 12
+  },
+  "version": "bench2026-single-annotator-v1"
+}

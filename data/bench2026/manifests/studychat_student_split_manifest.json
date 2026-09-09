@@ -1,0 +1,133 @@
+{
+  "generated_at_utc": "2026-09-08T01:40:12.127120+00:00",
+  "input": {
+    "conversations": 2122,
+    "labels": {
+      "answer_seeking": 4370,
+      "concept_understanding": 5378,
+      "debugging_help": 2587,
+      "reflection_verification": 669,
+      "task_clarification": 1101
+    },
+    "path": "data/final/studychat_behavior_labeled.jsonl",
+    "samples": 14105,
+    "sha256": "5f613f19ea438506c19a5550a0a39853b6eb81f00b11e2bac982f21cfb744e18",
+    "students": 202
+  },
+  "method": {
+    "balance_score": 0.026146909730989827,
+    "group_field": "user_id_hash",
+    "ratios": {
+      "dev": 0.15,
+      "test": 0.15,
+      "train": 0.7
+    },
+    "search_iterations": 5000,
+    "seed": 20260907,
+    "selection_objective": "minimize absolute deviation from requested sample and per-label split ratios while keeping exact student-count quotas",
+    "stratification_labels": "silver reviewed_label"
+  },
+  "overlap_checks": {
+    "conversations": {
+      "dev_test": 0,
+      "train_dev": 0,
+      "train_test": 0
+    },
+    "samples": {
+      "dev_test": 0,
+      "train_dev": 0,
+      "train_test": 0
+    },
+    "students": {
+      "dev_test": 0,
+      "train_dev": 0,
+      "train_test": 0
+    }
+  },
+  "schema_version": "1.0.0",
+  "split_version": "bench2026-student-v1",
+  "splits": {
+    "dev": {
+      "conversations": 312,
+      "labels": {
+        "answer_seeking": 645,
+        "concept_understanding": 814,
+        "debugging_help": 406,
+        "reflection_verification": 99,
+        "task_clarification": 189
+      },
+      "path": "data/bench2026/splits/studychat_student_dev.jsonl",
+      "samples": 2153,
+      "semesters": {
+        "f24": 792,
+        "s25": 1361
+      },
+      "sha256": "53ca91d6678c7db953d05357b492abc41e44e08a9c1f1e771c7326e0186d6d4f",
+      "students": 30,
+      "topics": {
+        "a1": 112,
+        "a2": 340,
+        "a3": 512,
+        "a4": 396,
+        "a5": 296,
+        "a6": 225,
+        "a7": 272
+      }
+    },
+    "test": {
+      "conversations": 338,
+      "labels": {
+        "answer_seeking": 660,
+        "concept_understanding": 787,
+        "debugging_help": 355,
+        "reflection_verification": 104,
+        "task_clarification": 155
+      },
+      "path": "data/bench2026/splits/studychat_student_test.jsonl",
+      "samples": 2061,
+      "semesters": {
+        "f24": 1043,
+        "s25": 1018
+      },
+      "sha256": "aeee06a82408f7aacf4613531e5c6a1ef4ec78857bfa649255de4d6a279d505b",
+      "students": 30,
+      "topics": {
+        "a1": 127,
+        "a2": 214,
+        "a3": 421,
+        "a4": 448,
+        "a5": 353,
+        "a6": 216,
+        "a7": 282
+      }
+    },
+    "train": {
+      "conversations": 1472,
+      "labels": {
+        "answer_seeking": 3065,
+        "concept_understanding": 3777,
+        "debugging_help": 1826,
+        "reflection_verification": 466,
+        "task_clarification": 757
+      },
+      "path": "data/bench2026/splits/studychat_student_train.jsonl",
+      "samples": 9891,
+      "semesters": {
+        "f24": 3899,
+        "s25": 5992
+      },
+      "sha256": "1c2d809513c3b0379065299e1eb5722c00dc135757bda0b9b6e26bcb3c2fcf81",
+      "students": 142,
+      "topics": {
+        "a1": 744,
+        "a2": 1240,
+        "a3": 2008,
+        "a4": 1762,
+        "a5": 1619,
+        "a6": 1244,
+        "a7": 1274
+      }
+    }
+  },
+  "test_use_policy": "Do not use the test split for prompt design, threshold tuning, model selection, example selection, or exploratory error analysis."
+}

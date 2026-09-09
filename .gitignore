@@ -33,6 +33,9 @@ Thumbs.db
 data/raw/
 data/processed/
 data/uploads/
+data/bench2026/*
+!data/bench2026/manifests/
+!data/bench2026/manifests/*.json
 !data/demo/
 
 # Generated reports and local working files

@@ -1,0 +1,28 @@
+{
+  "annotation_protocol_version": "bench2026-single-annotator-v1.1",
+  "annotated_workbook": {
+    "contains_private_conversation_text": true,
+    "filename": "EduGuard_BENCH2026_Single_Annotator_Annotated.xlsx",
+    "sha256": "A3CA339DC36D6769838AB9CD189385B53B747D472938E3B7D3C5AA47612C1929",
+    "tracked_in_git": false
+  },
+  "formal_completion_date_local": "2026-09-08",
+  "retest_schedule": {
+    "earliest_retest_date_local": "2026-09-16",
+    "isolation_period_end_local": "2026-09-15",
+    "isolation_period_start_local": "2026-09-09",
+    "minimum_complete_calendar_days": 7,
+    "timezone": "Asia/Shanghai"
+  },
+  "validation": {
+    "ambiguity_or_other_rows_requiring_notes": 22,
+    "invalid_or_missing_required_values": 0,
+    "notes_missing_when_required": 0,
+    "read_only_field_differences": 0,
+    "rows_complete": 550,
+    "rows_expected": 550,
+    "unique_visible_annotation_ids": 550,
+    "workbook_formula_errors": 0
+  },
+  "version": "bench2026-single-annotator-formal-completion-v1"
+}

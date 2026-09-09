@@ -1,0 +1,125 @@
+{
+  "analysis_note": "Historical A/B pack created before the single-annotator decision. It oversamples rare silver strata and is retained only for provenance; do not describe its same-person pilot as inter-annotator agreement. Use the single-annotator manifest for the active reference-set workflow.",
+  "annotation_version": "bench2026-gold-v1",
+  "status": "superseded by bench2026-single-annotator-v1; retained for provenance",
+  "blinding": {
+    "annotator_orders": "independently shuffled; identical sample membership",
+    "context_limitation": "prior_student_messages contains up to four earlier student prompts; assistant replies are unavailable in the source split",
+    "excluded_fields": [
+      "chat_id_hash",
+      "mapping_strength",
+      "mapping_version",
+      "predicted_label",
+      "reviewed_label",
+      "sample_id",
+      "source_justification",
+      "source_label",
+      "user_id_hash"
+    ],
+    "exposed_fields": [
+      "annotation_id",
+      "phase",
+      "order",
+      "semester",
+      "topic",
+      "prior_student_messages",
+      "student_message",
+      "behavior_label",
+      "attempt_evidence",
+      "answer_restriction_needed",
+      "appropriate_assistance_level",
+      "recommended_strategy",
+      "assessment_context",
+      "ambiguity_flag",
+      "review_notes"
+    ]
+  },
+  "generated_at_utc": "2026-09-08T01:53:05.057763+00:00",
+  "input": {
+    "conversations": 338,
+    "label_distribution": {
+      "answer_seeking": 660,
+      "concept_understanding": 787,
+      "debugging_help": 355,
+      "reflection_verification": 104,
+      "task_clarification": 155
+    },
+    "path": "data/bench2026/splits/studychat_student_test.jsonl",
+    "samples": 2061,
+    "sha256": "aeee06a82408f7aacf4613531e5c6a1ef4ec78857bfa649255de4d6a279d505b",
+    "students": 30
+  },
+  "outputs": {
+    "annotator_a_formal": {
+      "path": "data/bench2026/human_eval/annotator_a_formal_550.jsonl",
+      "rows": 550,
+      "sha256": "27bae92e748624cc4cd476542b1a2f04c046a53425cce9096e1d03c4f7a91870"
+    },
+    "annotator_a_pilot": {
+      "path": "data/bench2026/human_eval/annotator_a_pilot_50.jsonl",
+      "rows": 50,
+      "sha256": "a023a6d06872feaf1a4663e2912554a090b19054090d3bef5cf29732a527ccd0"
+    },
+    "annotator_b_formal": {
+      "path": "data/bench2026/human_eval/annotator_b_formal_550.jsonl",
+      "rows": 550,
+      "sha256": "c10fe6061489773873326d4004b9880dc9601e532ee540a268dfc8ae3046c2db"
+    },
+    "annotator_b_pilot": {
+      "path": "data/bench2026/human_eval/annotator_b_pilot_50.jsonl",
+      "rows": 50,
+      "sha256": "cc440f85e989fdd075e5f49f6c8e4bf21cb91e325fa519751b4f3e72b81d84e7"
+    }
+  },
+  "private_key": {
+    "path": "data/bench2026/human_eval/gold_annotation_private_key.jsonl",
+    "sha256": "14135e7f2725173d84662bc0714acbe2bf4de6303e04ca40bf5241499ecad92e",
+    "tracked_in_git": false
+  },
+  "sampling": {
+    "formal_samples": 550,
+    "has_prior_student_messages": 482,
+    "label_distribution": {
+      "answer_seeking": 125,
+      "concept_understanding": 125,
+      "debugging_help": 125,
+      "reflection_verification": 100,
+      "task_clarification": 125
+    },
+    "label_quotas": {
+      "answer_seeking": 125,
+      "concept_understanding": 125,
+      "debugging_help": 125,
+      "reflection_verification": 100,
+      "task_clarification": 125
+    },
+    "pilot_per_label": 10,
+    "pilot_samples": 50,
+    "sampling_weights_by_silver_label": {
+      "answer_seeking": 5.28,
+      "concept_understanding": 6.296,
+      "debugging_help": 2.84,
+      "reflection_verification": 1.04,
+      "task_clarification": 1.24
+    },
+    "seed": 20260908,
+    "selected_conversations": 235,
+    "selected_samples": 600,
+    "selected_students": 30,
+    "selection_uses": "silver labels for fixed quotas only",
+    "semester_distribution": {
+      "f24": 283,
+      "s25": 317
+    },
+    "source_split": "student-held-out test",
+    "topic_distribution": {
+      "a1": 36,
+      "a2": 64,
+      "a3": 126,
+      "a4": 127,
+      "a5": 94,
+      "a6": 64,
+      "a7": 89
+    }
+  }
+}

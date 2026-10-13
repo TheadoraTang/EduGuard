@@ -6,7 +6,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 
 from prepare_bench2026_single_annotator import (  # noqa: E402
     ANNOTATION_FIELDS,
+    ACTIVE_RETEST_PER_SILVER_STRATUM,
     RETEST_PER_SILVER_STRATUM,
+    derive_retest_40,
     prepare_formal,
     prepare_retest,
     select_retest_rows,
@@ -88,6 +90,28 @@ def test_retest_has_twelve_rows_per_silver_stratum_and_alias_ids():
         source = formal_by_id[mapping_by_alias[row["annotation_id"]]["formal_annotation_id"]]
         assert row["student_message"] == source["student_message"]
         assert row["phase"] == "delayed_retest"
+
+
+def test_retest_40_is_balanced_deterministic_and_derived_from_retest_60():
+    rows, private = make_rows()
+    formal = prepare_formal(rows, seed=20260909)
+    selected = select_retest_rows(formal, private, seed=20260910)
+    retest_60, mapping_60 = prepare_retest(selected, private, seed=20260911)
+
+    first, first_mapping = derive_retest_40(retest_60, mapping_60, seed=20260914)
+    second, second_mapping = derive_retest_40(retest_60, mapping_60, seed=20260914)
+
+    assert first == second
+    assert first_mapping == second_mapping
+    assert len(first) == ACTIVE_RETEST_PER_SILVER_STRATUM * len(LABELS)
+    assert Counter(row["silver_label"] for row in first_mapping) == {
+        label: ACTIVE_RETEST_PER_SILVER_STRATUM for label in LABELS
+    }
+    source_aliases = {row["annotation_id"] for row in retest_60}
+    assert {row["annotation_id"] for row in first} <= source_aliases
+    assert [row["order"] for row in first] == list(range(1, 41))
+    assert all(not row[field] for row in first for field in ANNOTATION_FIELDS)
+    assert all("source_retest_60_order" in row for row in first_mapping)
 
 
 def test_validate_rejects_prefilled_formal_annotations():

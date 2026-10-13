@@ -1,0 +1,74 @@
+{
+  "amendment_date_local": "2026-09-14",
+  "design": {
+    "annotators": 1,
+    "delayed_retest_samples": 40,
+    "formal_unique_samples": 550,
+    "minimum_delay_days": 7,
+    "paper_term": "single-annotator reference set",
+    "prohibited_claim": "inter-annotator agreement",
+    "reannotation_trigger": null,
+    "retest_fraction_of_formal": 0.072727,
+    "retest_occurrences_per_selected_item": 1
+  },
+  "generated_at_utc": "2026-09-14T02:39:46.947868+00:00",
+  "inputs": {
+    "formal": {
+      "modified_by_amendment": false,
+      "path": "data/bench2026/human_eval/single_annotator_formal_550.jsonl",
+      "rows": 550,
+      "sha256": "d9af4964f8ea29748549202603d4f74b1a9b9637163efd351b3d1f30655567ea"
+    },
+    "retest_60": {
+      "path": "data/bench2026/human_eval/single_annotator_retest_60.jsonl",
+      "rows": 60,
+      "sha256": "1062cc7104c82fb4d701da0b4b56e9d8bcac2589dda6c0f6b03fea73a0cc6c61"
+    },
+    "retest_60_private_mapping": {
+      "path": "data/bench2026/human_eval/single_annotator_retest_private_key.jsonl",
+      "rows": 60,
+      "sha256": "201da596d734fa3a9529be38b5b3b30bd16e98f963eb60673904c45748349cb1",
+      "tracked_in_git": false
+    }
+  },
+  "integrity": {
+    "formal_rows_unchanged": true,
+    "retest_maps_to_formal": true,
+    "retest_visible_ids_unique": true,
+    "visible_id_overlap": 0
+  },
+  "outputs": {
+    "retest_40": {
+      "path": "data/bench2026/human_eval/single_annotator_retest_40.jsonl",
+      "rows": 40,
+      "sha256": "dedcb800271cad2238151268e901e932fd8968ba97350410f0064f21afe13b72"
+    },
+    "retest_40_private_mapping": {
+      "path": "data/bench2026/human_eval/single_annotator_retest_40_private_key.jsonl",
+      "rows": 40,
+      "sha256": "baecbd8eeee9f28abc21916cf58d21ab402dbb35a54cf92e92222d1e840508a1",
+      "tracked_in_git": false
+    }
+  },
+  "reason": "Reduce repeat-annotation burden before the delayed retest begins",
+  "retest_silver_strata": {
+    "answer_seeking": 8,
+    "concept_understanding": 8,
+    "debugging_help": 8,
+    "reflection_verification": 8,
+    "task_clarification": 8
+  },
+  "selection": {
+    "method": "Deterministic simple random sample within each silver stratum, followed by deterministic reshuffle",
+    "per_silver_stratum": 8,
+    "seed": 20260914,
+    "source": "Previously frozen 60-item blinded retest pack"
+  },
+  "status": "active",
+  "timing": {
+    "formal_annotation_completed": true,
+    "reliability_calculated": false,
+    "retest_started": false
+  },
+  "version": "bench2026-single-annotator-v1.2"
+}

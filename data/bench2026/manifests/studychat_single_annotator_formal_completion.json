@@ -1,5 +1,6 @@
 {
-  "annotation_protocol_version": "bench2026-single-annotator-v1.1",
+  "annotation_protocol_version_at_completion": "bench2026-single-annotator-v1.1",
+  "active_protocol_amendment": "bench2026-single-annotator-v1.2",
   "annotated_workbook": {
     "contains_private_conversation_text": true,
     "filename": "EduGuard_BENCH2026_Single_Annotator_Annotated.xlsx",
@@ -8,10 +9,12 @@
   },
   "formal_completion_date_local": "2026-09-08",
   "retest_schedule": {
+    "active_retest_samples": 40,
     "earliest_retest_date_local": "2026-09-16",
     "isolation_period_end_local": "2026-09-15",
     "isolation_period_start_local": "2026-09-09",
     "minimum_complete_calendar_days": 7,
+    "retest_occurrences_per_selected_item": 1,
     "timezone": "Asia/Shanghai"
   },
   "validation": {

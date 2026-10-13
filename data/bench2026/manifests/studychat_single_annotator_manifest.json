@@ -1,4 +1,6 @@
 {
+  "status": "superseded_for_delayed_retest_only",
+  "superseded_by": "data/bench2026/manifests/studychat_single_annotator_retest40_amendment.json",
   "design": {
     "annotators": 1,
     "delayed_retest_samples": 60,

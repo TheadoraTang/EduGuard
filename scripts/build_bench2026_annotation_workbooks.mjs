@@ -5,6 +5,7 @@ import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 const root = path.resolve(import.meta.dirname, "..");
 const dataDir = path.join(root, "data", "bench2026", "human_eval");
 const singleMode = process.argv.includes("--single");
+const singleRetest40Mode = process.argv.includes("--single-retest40");
 const outputArgument = process.argv.slice(2).find((value) => !value.startsWith("--"));
 const outputDir = outputArgument
   ? path.resolve(outputArgument)
@@ -447,7 +448,7 @@ function buildSingleProgressSheet(sheet, batchName, rowCount) {
   sheet.getRange("A6:B8").values = [
     ["正式集完成日期", "（由标注者填写 YYYY-MM-DD）"],
     ["本批开始日期", "（由标注者填写 YYYY-MM-DD）"],
-    ["间隔要求", batchName === "正式550" ? "完成后至少7个完整日历日再做后测60" : "距正式集完成至少7个完整日历日"],
+    ["间隔要求", batchName === "正式550" ? "完成后至少7个完整日历日再做后测40" : "距正式集完成至少7个完整日历日"],
   ];
   sheet.getRange("A6:A8").format = { fill: "#D9EAF7", font: { bold: true, color: "#17365D" } };
   sheet.getRange("B6:B8").format = { fill: "#FFF8D9", wrapText: true };
@@ -595,7 +596,17 @@ async function buildWorkbook(annotatorKey, annotatorName) {
 }
 
 const results = [];
-if (singleMode) {
+if (singleRetest40Mode) {
+  results.push(await buildSingleWorkbook({
+    inputFilename: "single_annotator_retest_40.jsonl",
+    batchName: "后测40",
+    title: "EduGuard 单标注者参考集 · 延迟后测40",
+    subtitle: "仅在正式550完成至少7个完整日历日后开始。每条只复标一次；不得查看正式标签或映射，样本ID和顺序已盲化。",
+    tableName: "SingleRetest40Table",
+    outputFilename: "EduGuard_BENCH2026_Single_Annotator_Retest40.xlsx",
+    previewSlug: "retest40",
+  }));
+} else if (singleMode) {
   results.push(await buildSingleWorkbook({
     inputFilename: "single_annotator_formal_550.jsonl",
     batchName: "正式550",
@@ -606,13 +617,13 @@ if (singleMode) {
     previewSlug: "formal",
   }));
   results.push(await buildSingleWorkbook({
-    inputFilename: "single_annotator_retest_60.jsonl",
-    batchName: "后测60",
-    title: "EduGuard 单标注者参考集 · 延迟后测60",
-    subtitle: "仅在正式550完成至少7个完整日历日后开始。不得查看正式标签或映射；样本ID和顺序已独立盲化。",
-    tableName: "SingleRetestTable",
-    outputFilename: "EduGuard_BENCH2026_Single_Annotator_Retest.xlsx",
-    previewSlug: "retest",
+    inputFilename: "single_annotator_retest_40.jsonl",
+    batchName: "后测40",
+    title: "EduGuard 单标注者参考集 · 延迟后测40",
+    subtitle: "仅在正式550完成至少7个完整日历日后开始。每条只复标一次；不得查看正式标签或映射，样本ID和顺序已盲化。",
+    tableName: "SingleRetest40Table",
+    outputFilename: "EduGuard_BENCH2026_Single_Annotator_Retest40.xlsx",
+    previewSlug: "retest40",
   }));
 } else {
   results.push(await buildWorkbook("a", "Annotator A"));

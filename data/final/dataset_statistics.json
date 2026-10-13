@@ -1,0 +1,54 @@
+{
+  "studychat": {
+    "source_samples": 16850,
+    "labeled_samples": 14105,
+    "excluded_samples": 2745,
+    "retention_rate": 0.8370919881305638,
+    "label_distribution": {
+      "answer_seeking": 4370,
+      "concept_understanding": 5378,
+      "debugging_help": 2587,
+      "reflection_verification": 669,
+      "task_clarification": 1101
+    },
+    "split_distribution": {
+      "dev": 2141,
+      "test": 1938,
+      "train": 10026
+    },
+    "retained_samples_with_blank_initial_prediction": 567,
+    "excluded_with_review_notes": 2745,
+    "unique_conversations": 2122,
+    "unique_students": 202,
+    "split_leakage_by_conversation": 0
+  },
+  "mathdial": {
+    "source_samples": 1977,
+    "labeled_samples": 1977,
+    "excluded_samples": 0,
+    "strategy_distribution": {
+      "direct_explanation": 141,
+      "error_focus": 356,
+      "feedback_prompt": 660,
+      "generic_prompt": 169,
+      "probing_question": 651
+    },
+    "split_distribution": {
+      "dev": 235,
+      "test": 338,
+      "train": 1404
+    },
+    "answer_disclosure_distribution": {
+      "no": 1836,
+      "yes": 141
+    },
+    "answer_disclosure_rate": 0.07132018209408195,
+    "mean_scores": {
+      "pedagogical_relevance_score": 4.60192210419828,
+      "promotes_thinking_score": 4.167425392008093,
+      "clarity_score": 4.935255437531613
+    },
+    "unique_problems": 683,
+    "split_leakage_by_problem": 0
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "version": "bench2026-single-annotator-retest40-completion-v1",
+  "analysis_date_local": "2026-09-17",
+  "annotation_protocol_version": "bench2026-single-annotator-v1.2",
+  "formal_workbook": {
+    "filename": "EduGuard_BENCH2026_Single_Annotator_Annotated.xlsx",
+    "sha256": "A3CA339DC36D6769838AB9CD189385B53B747D472938E3B7D3C5AA47612C1929",
+    "unchanged_from_frozen_completion": true,
+    "tracked_in_git": false
+  },
+  "retest_workbook": {
+    "filename": "EduGuard_BENCH2026_Single_Annotator_Retest40.xlsx",
+    "sha256": "654A7986689CDD2FD537FCEEA0415083E3161758067613C1D6CA4DC1C68009A8",
+    "contains_private_conversation_text": true,
+    "tracked_in_git": false
+  },
+  "quality_control": {
+    "rows_expected": 40,
+    "rows_complete": 40,
+    "invalid_or_missing_required_values": 0,
+    "read_only_field_differences": 0,
+    "unique_visible_annotation_ids": 40,
+    "visible_id_overlap_with_formal": 0,
+    "required_notes": 7,
+    "required_notes_filled": 7,
+    "private_mapping_resolved": 40,
+    "passed": true
+  },
+  "timing": {
+    "formal_completion_date_local": "2026-09-08",
+    "earliest_allowed_retest_start_date_local": "2026-09-16",
+    "retest_start_date_recorded_in_workbook": false,
+    "retest_start_date_self_reported_local": "2026-09-16",
+    "minimum_complete_calendar_days": 7,
+    "minimum_delay_condition_met_from_self_report": true,
+    "start_date_independently_verified": false,
+    "comment": "The annotator confirmed a 2026-09-16 start in conversation. The workbook does not record its start date; file modification time cannot independently establish when annotation began."
+  },
+  "reliability": {
+    "paired_samples": 40,
+    "method": "Cohen's kappa; quadratic weighted Cohen's kappa for assistance level",
+    "bootstrap": {
+      "iterations": 5000,
+      "seed": 20260917,
+      "interval": "95% paired percentile"
+    },
+    "behavior_label": {
+      "agreements": 32,
+      "raw_agreement": 0.8,
+      "kappa": 0.725793,
+      "kappa_ci95": [0.534108, 0.892186],
+      "preregistered_point_target_met": true
+    },
+    "answer_restriction_needed": {
+      "agreements": 29,
+      "raw_agreement": 0.725,
+      "kappa": 0.382022,
+      "kappa_ci95": [0.098782, 0.647059],
+      "preregistered_point_target_met": false
+    },
+    "appropriate_assistance_level": {
+      "agreements": 19,
+      "raw_agreement": 0.475,
+      "quadratic_weighted_kappa": 0.129032,
+      "kappa_ci95": [-0.17895, 0.414641],
+      "preregistered_point_target_met": false
+    }
+  },
+  "analysis_decision": {
+    "formal_labels_revised_after_retest": false,
+    "additional_reannotation_required": false,
+    "behavior_label": "Point estimate meets target, but 40 stratified repeats and wide CI limit generalization, especially for rare classes.",
+    "answer_restriction_needed": "Target not met; do not present label-based findings as confirmatory high-reliability benchmark results.",
+    "appropriate_assistance_level": "Target not met; treat label-based findings as exploratory and do not claim reliable ground truth."
+  },
+  "analysis_artifacts": {
+    "script": "scripts/analyze_bench2026_single_annotator_retest.mjs",
+    "detailed_report": "output/bench2026/retest40/validation_and_agreement.md",
+    "full_metrics_and_confusion_matrices": "output/bench2026/retest40/validation_and_agreement.json"
+  }
+}
